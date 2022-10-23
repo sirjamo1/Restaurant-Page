@@ -1,0 +1,80 @@
+* {
+ padding: 0;
+ margin: 0;
+ color:white;
+ 
+}
+/*👉HEADER STYLES👈*/
+.header {
+ background-color: bisque;
+ position: fixed;
+ width: 100vw;
+ height: 100px;
+ display: flex;
+ justify-content: space-between;
+}
+.icon-container {
+ display: flex;
+ margin-left: 20px;
+ align-items: center;
+}
+.icon-container > img {
+width: 20%;
+}
+.icon-container > h1 {
+ padding-left: 10px;
+ font-size: 3rem;
+}
+.navbar {
+ display: flex;
+ margin-right: 30px;
+ justify-content: center;
+ align-items: center;
+}
+.navbar > h4{
+min-width: 30px;
+ padding: 10px;
+ font-size: 1.5rem;
+}
+.underline-link {
+ text-decoration: underline;
+}
+.navbar > h4:hover{
+
+ text-decoration: underline;
+}
+/*👉FOOTER STYLES👈*/
+footer {
+ position: fixed;
+ width: 100vw;
+ bottom: 0px;
+ /*👉height: 20px;👈*/
+
+ text-align: center;
+}
+footer > h4 {
+padding: 10px;
+}
+/*👉HOME STYLES👈*/
+
+.home-container {
+position: absolute;
+left: 50%;
+top: 50%;
+}
+
+/*👉MENU STYLES👈*/
+
+.menu-container {
+position: absolute;
+left: 50%;
+top: 50%;
+}
+
+/*👉CONTACT STYLES👈*/
+
+.contact-container {
+position: absolute;
+left: 50%;
+top: 50%;
+}
