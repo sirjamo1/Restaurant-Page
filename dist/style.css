@@ -12,6 +12,7 @@
  height: 100px;
  display: flex;
  justify-content: space-between;
+ z-index: 99;
 }
 .icon-container {
  display: flex;
@@ -25,6 +26,21 @@ width: 20%;
  padding-left: 10px;
  font-size: 3rem;
 }
+.marble-stakehouse-text-container {
+margin-left: 10px;
+}
+.marble-steakhouse-text:nth-child(7) {
+ margin-left: 8px;
+}
+.marble-steakhouse-text {
+ display: inline-block;
+  padding-left: 2px;
+ font-size: 2.3rem;
+}
+.marble-steakhouse-text:hover {
+ color: red;
+ font-size: 2.6rem;
+}
 .navbar {
  display: flex;
  margin-right: 30px;
@@ -35,12 +51,13 @@ width: 20%;
 min-width: 30px;
  padding: 10px;
  font-size: 1.5rem;
-}
-.underline-link {
- text-decoration: underline;
+ cursor: pointer;
 }
 .navbar > h4:hover{
-
+ text-decoration: underline;
+}
+.home-link {
+ color: red;
  text-decoration: underline;
 }
 /*👉FOOTER STYLES👈*/
@@ -48,8 +65,7 @@ footer {
  position: fixed;
  width: 100vw;
  bottom: 0px;
- /*👉height: 20px;👈*/
-
+background-color: rgba(255, 255, 255, 0.75);
  text-align: center;
 }
 footer > h4 {
@@ -64,11 +80,88 @@ top: 50%;
 }
 
 /*👉MENU STYLES👈*/
-
 .menu-container {
+height: 100%;
+width: 100%;
+margin-top: 100px;
 position: absolute;
-left: 50%;
-top: 50%;
+}
+.menu-container > h1 {
+ color: red;
+ font-size: 2.5rem;
+text-shadow: 2px 2px 2px rgba(255, 0, 0, .51);
+margin: 40px 0px 40px 40px;
+}
+
+.menu-item-container {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+justify-content: space-around;
+
+}
+
+
+.menu-cards {
+ background-color: rgba(255, 255, 255, 0.35);
+ border-radius: 10px;
+ text-align: center;
+ height: 300px;
+ display: grid;
+ margin: 60px;
+ grid-template-rows: 1fr 2fr 3fr;
+ justify-items: center;
+
+}
+.menu-cards > h3 {
+ margin-top: 10px;
+}
+.menu-cards > h4 {
+margin: 10px 20px;
+}
+.menu-cards > * {
+ /*👉border: 1px solid red;👈*/
+}
+.menu-cards > img {
+width: 250px;
+align-self: center;
+border-radius: 10px;
+}
+.menu-cards > p {
+ font-size: 0.6rem;
+ margin: 4px 0px;
+}
+
+.rare-well-done-img {
+ width: 100%;
+}
+
+.sauce-container {
+ display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+justify-items: center;
+align-items: center;
+gap: 30px;
+
+}
+.sauce-cards {
+display: grid;
+width: 250px;
+background-color: rgba(255, 255, 255, 0.35);
+text-align: center;
+border-radius: 10px;
+justify-items: center;
+/*👉margin: 25px;👈*/
+}
+.sauce-cards > h4 {
+margin: 10px 20px;
+}
+.sauce-image {
+ border-radius: 20px;
+ margin: 5px;
+ align-self: center;
+}
+.order-at-counter {
+ padding-bottom: 100px;
 }
 
 /*👉CONTACT STYLES👈*/

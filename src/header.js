@@ -3,7 +3,8 @@ import changePage from "../src/index"
 
 
 const header = () => {
-    //const mainContainer = document.getElementById("content");
+const marbleSteakhouseText = "MarbleSteakhouse"
+
     const header = document.createElement("header");
     header.classList.add("header");
     const iconContainer = document.createElement("div");
@@ -13,8 +14,20 @@ const header = () => {
     steakImage.setAttribute("src", "/src/images/steak-transparent.png");
     steakImage.setAttribute("alt", "steak");
     iconContainer.appendChild(steakImage);
-    const marbleSteakhouse = document.createElement("h1");
-    marbleSteakhouse.innerHTML = "Marble Steakhouse";
+        const marbleSteakhouse = document.createElement("div");
+        marbleSteakhouse.classList.add("marble-stakehouse-text-container")
+        for (let i = 0; i < marbleSteakhouseText.length; i++){
+            let letter = document.createElement("h1")
+            letter.classList.add("marble-steakhouse-text")
+            letter.innerHTML = marbleSteakhouseText[i];
+            marbleSteakhouse.appendChild(letter)
+            
+        }
+            
+    
+        //marbleSteakhouse.innerHTML = "Marble Steakhouse";
+    // const marbleSteakhouse = document.createElement("h1");
+    // marbleSteakhouse.innerHTML = "Marble Steakhouse";
     iconContainer.appendChild(marbleSteakhouse);
     const navbar = document.createElement("nav");
     navbar.classList.add("navbar");
@@ -41,7 +54,6 @@ const header = () => {
     navbar.appendChild(homeLink);
     navbar.appendChild(menuLink);
     navbar.appendChild(contactLink);
-    //mainContainer.appendChild(header);
     return header
 };
 export default header;
