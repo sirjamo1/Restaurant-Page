@@ -1,173 +1,223 @@
 * {
- padding: 0;
- margin: 0;
- color:white;
- 
+    padding: 0;
+    margin: 0;
+    color: white;
 }
 /*👉HEADER STYLES👈*/
 .header {
- background-color: bisque;
- position: fixed;
- width: 100vw;
- height: 100px;
- display: flex;
- justify-content: space-between;
- z-index: 99;
+    background-color: rgb(30, 22, 22);
+    position: fixed;
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 99;
 }
 .icon-container {
- display: flex;
- margin-left: 20px;
- align-items: center;
+    display: flex;
+    margin-left: 20px;
+    align-items: center;
 }
 .icon-container > img {
-width: 20%;
+    width: 20%;
 }
 .icon-container > h1 {
- padding-left: 10px;
- font-size: 3rem;
+    padding-left: 10px;
 }
-.marble-stakehouse-text-container {
-margin-left: 10px;
+.marble-steakhouse-text-container {
+    margin-left: 10px;
 }
-.marble-steakhouse-text:nth-child(7) {
- margin-left: 8px;
+.marble-text-div {
+ background-image: url("/src/images/marble-white.png");
+ background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
 }
+.steak-house-text-div{
+background-image: url("/src/images/marble-white.png");
+background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
 .marble-steakhouse-text {
- display: inline-block;
-  padding-left: 2px;
- font-size: 2.3rem;
+    display: inline-block;
+    padding-left: 2px;
+    font-size: 2.6em;
+    font-weight: 900;
+    color: transparent
 }
 .marble-steakhouse-text:hover {
- color: red;
- font-size: 2.6rem;
+    color: red;
 }
+
+
 .navbar {
- display: flex;
- margin-right: 30px;
- justify-content: center;
- align-items: center;
+    display: flex;
+    margin-right: 30px;
+    justify-content: center;
+    align-items: center;
 }
-.navbar > h4{
-min-width: 30px;
- padding: 10px;
- font-size: 1.5rem;
- cursor: pointer;
+.navbar > h4 {
+    min-width: 30px;
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
-.navbar > h4:hover{
- text-decoration: underline;
+.navbar > h4:hover {
+    text-decoration: underline;
 }
 .home-link {
- color: red;
- text-decoration: underline;
+    color: red;
+    text-decoration: underline;
 }
+
 /*👉FOOTER STYLES👈*/
 footer {
- position: fixed;
- width: 100vw;
- bottom: 0px;
-background-color: rgba(255, 255, 255, 0.75);
- text-align: center;
+    position: fixed;
+    width: 100vw;
+    bottom: 0px;
+    background-color: rgba(255, 255, 255, 0.75);
+    text-align: center;
 }
 footer > h4 {
-padding: 10px;
+    padding: 10px;
 }
 /*👉HOME STYLES👈*/
 
 .home-container {
-position: absolute;
-left: 50%;
-top: 50%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+   
+    justify-content: center;
+}
+.home-container > * {
+   margin: 0px 40px;
+}
+.home-container > div {
+ 
+ max-width: 450px;
+ place-self: center;
+}
+.home-container > img {
+    width: 80%;
+    max-width: 500px;
+    border-radius: 50%;
+    place-self: center;
+}
+.home-container h1 {
+    color: red;
+    font-size: 3rem;
+    text-shadow: 2px 2px 2px rgba(255, 0, 0, 0.51);
+    margin-bottom: 20px;
 }
 
+@media screen and (max-width: 1000px )  {
+ .home-container > img {
+ margin-top: 100px;
+ margin-bottom: -20px;
+}
+}
+@media screen and (max-width: 800px )  {
+ .marble-steakhouse-text {
+  font-size: 1.8rem;
+ }
+ .icon-container > img {
+    width: 30%;
+}
+.navbar > h4 {
+ font-size: 1rem;
+ min-width: 20px;
+}
+
+}
 /*👉MENU STYLES👈*/
 .menu-container {
-height: 100%;
-width: 100%;
-margin-top: 100px;
-position: absolute;
+    height: 100%;
+    width: 100%;
+    margin-top: 100px;
+    position: absolute;
 }
 .menu-container > h1 {
- color: red;
- font-size: 2.5rem;
-text-shadow: 2px 2px 2px rgba(255, 0, 0, .51);
-margin: 40px 0px 40px 40px;
+    color: red;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 2px rgba(255, 0, 0, 0.51);
+    margin: 40px 0px 40px 40px;
 }
 
 .menu-item-container {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-justify-content: space-around;
-
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    justify-content: space-around;
 }
-
 
 .menu-cards {
- background-color: rgba(255, 255, 255, 0.35);
- border-radius: 10px;
- text-align: center;
- height: 300px;
- display: grid;
- margin: 60px;
- grid-template-rows: 1fr 2fr 3fr;
- justify-items: center;
-
+    background-color: rgba(255, 255, 255, 0.35);
+    border-radius: 10px;
+    text-align: center;
+    height: 300px;
+    display: grid;
+    margin: 60px;
+    grid-template-rows: 1fr 2fr 3fr;
+    justify-items: center;
 }
 .menu-cards > h3 {
- margin-top: 10px;
+    margin-top: 10px;
 }
 .menu-cards > h4 {
-margin: 10px 20px;
+    margin: 10px 20px;
 }
-.menu-cards > * {
- /*👉border: 1px solid red;👈*/
-}
+
 .menu-cards > img {
-width: 250px;
-align-self: center;
-border-radius: 10px;
+    width: 250px;
+    align-self: center;
+    border-radius: 10px;
 }
 .menu-cards > p {
- font-size: 0.6rem;
- margin: 4px 0px;
+    font-size: 0.6rem;
+    margin: 4px 0px;
 }
 
 .rare-well-done-img {
- width: 100%;
+    width: 100%;
 }
 
 .sauce-container {
- display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-justify-items: center;
-align-items: center;
-gap: 30px;
-
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-items: center;
+    align-items: center;
+    gap: 30px;
 }
 .sauce-cards {
-display: grid;
-width: 250px;
-background-color: rgba(255, 255, 255, 0.35);
-text-align: center;
-border-radius: 10px;
-justify-items: center;
-/*👉margin: 25px;👈*/
+    display: grid;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.35);
+    text-align: center;
+    border-radius: 10px;
+    justify-items: center;
+    /*👉margin: 25px;👈*/
 }
 .sauce-cards > h4 {
-margin: 10px 20px;
+    margin: 10px 20px;
 }
 .sauce-image {
- border-radius: 20px;
- margin: 5px;
- align-self: center;
+    border-radius: 20px;
+    margin: 5px;
+    align-self: center;
 }
 .order-at-counter {
- padding-bottom: 100px;
+    padding-bottom: 100px;
 }
 
 /*👉CONTACT STYLES👈*/
 
 .contact-container {
-position: absolute;
-left: 50%;
-top: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
 }
