@@ -1,10 +1,6 @@
-import changePage from "../src/index"
-
-
+import changePage from "../src/index";
 
 const header = () => {
-const marbleSteakhouseText = "MarbleSteakhouse"
-
     const header = document.createElement("header");
     header.classList.add("header");
     const iconContainer = document.createElement("div");
@@ -14,20 +10,27 @@ const marbleSteakhouseText = "MarbleSteakhouse"
     steakImage.setAttribute("src", "/src/images/steak-transparent.png");
     steakImage.setAttribute("alt", "steak");
     iconContainer.appendChild(steakImage);
-        const marbleSteakhouse = document.createElement("div");
-        marbleSteakhouse.classList.add("marble-stakehouse-text-container")
-        for (let i = 0; i < marbleSteakhouseText.length; i++){
-            let letter = document.createElement("h1")
-            letter.classList.add("marble-steakhouse-text")
-            letter.innerHTML = marbleSteakhouseText[i];
-            marbleSteakhouse.appendChild(letter)
-            
-        }
-            
-    
-        //marbleSteakhouse.innerHTML = "Marble Steakhouse";
-    // const marbleSteakhouse = document.createElement("h1");
-    // marbleSteakhouse.innerHTML = "Marble Steakhouse";
+    const marbleSteakhouse = document.createElement("div");
+    marbleSteakhouse.classList.add("marble-steakhouse-text-container");
+    const marbleTextDiv = document.createElement("div");
+    marbleTextDiv.classList.add("marble-text-div")
+    const marbleSteakhouseText = ["Marble", "Steakhouse"];
+    for (let i = 0; i < marbleSteakhouseText[0].length; i++) {
+        let letter = document.createElement("h1");
+        letter.classList.add("marble-steakhouse-text");
+        letter.innerHTML = marbleSteakhouseText[0][i];
+        marbleTextDiv.appendChild(letter);
+        marbleSteakhouse.appendChild(marbleTextDiv);
+    }
+    const steakhouseTextDiv = document.createElement("div");
+    steakhouseTextDiv.classList.add("steak-house-text-div");
+    for (let i = 0; i < marbleSteakhouseText[1].length; i++) {
+        let letter = document.createElement("h1");
+        letter.classList.add("marble-steakhouse-text");
+        letter.innerHTML = marbleSteakhouseText[1][i];
+        steakhouseTextDiv.appendChild(letter);
+        marbleSteakhouse.appendChild(steakhouseTextDiv);
+    }
     iconContainer.appendChild(marbleSteakhouse);
     const navbar = document.createElement("nav");
     navbar.classList.add("navbar");
@@ -36,7 +39,6 @@ const marbleSteakhouseText = "MarbleSteakhouse"
     homeLink.classList.add("home-link");
     homeLink.addEventListener("click", (e) => {
         changePage(e.target.innerHTML.toLowerCase());
-        
     });
     homeLink.innerHTML = "Home";
     const menuLink = document.createElement("h4");
@@ -54,6 +56,6 @@ const marbleSteakhouseText = "MarbleSteakhouse"
     navbar.appendChild(homeLink);
     navbar.appendChild(menuLink);
     navbar.appendChild(contactLink);
-    return header
+    return header;
 };
 export default header;
