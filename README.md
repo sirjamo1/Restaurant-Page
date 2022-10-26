@@ -85,7 +85,7 @@
 ## About The Project
 
 <a href="https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page">Marble Steakhouse</a> Restaurant-Page was built for <a href="https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page">The Odin Project.</a> The focus for the build was to demonstrate the usefulness of Webpack.
-<a href=" https://sirjamo1.github.io/Restaurant-Page/">Click Here</a> for live link. 
+<a href="https://sirjamo1.github.io/Restaurant-Page/">Click Here</a> for live link. 
 
 Note: Menu page is scrollable
 
