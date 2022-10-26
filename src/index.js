@@ -4,6 +4,7 @@ import home from "./pages/home";
 import menu from "./pages/menu";
 import contact from "./pages/contact";
 
+
 document.body.style.background =
     "url('/src/assets/images/marble-background.png') center center/cover fixed no-repeat";
 const mainContainer = document.getElementById("content");

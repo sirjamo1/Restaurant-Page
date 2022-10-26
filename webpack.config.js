@@ -1,5 +1,5 @@
 const path = require("path");
-const CopyPlugin = require("copy-webpack-plugin");
+// const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     entry: "./src/index.js",
@@ -7,12 +7,25 @@ module.exports = {
         filename: "main.js",
         path: path.resolve(__dirname, "dist"),
     },
-    plugins: [
-        new CopyPlugin({
-            patterns: [
-                { from: "src/assets", to: "dest/" },
-                { from: "other", to: "public" },
-            ],
-        }),
-    ],
+    module: {
+        rules: [
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: "asset/resource",
+            },
+        ],
+    },
+
+    // plugins: [
+    //     new CopyPlugin({
+    //         patterns: [
+    //             { from: "src/assets", to: "dest" },
+    //             // { from: "other", to: "public" },
+    //         ],
+    //     }),
+    // ],
 };

@@ -1,4 +1,4 @@
-
+import github from './assets/icons/github.svg'
 
 const footer = () => {
     const footerContainer = document.createElement("footer");
@@ -12,7 +12,7 @@ const footer = () => {
         "https://github.com/sirjamo1/Restaurant-Page"
     );
     const githubIcon = document.createElement("img");
-    githubIcon.setAttribute("src", "/src/assets/icons/github.svg");
+    githubIcon.setAttribute("src", github);
     githubIcon.setAttribute("alt", "github icon");
     linkToGithub.appendChild(githubIcon);
     footerText.appendChild(linkToGithub);
