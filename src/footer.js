@@ -1,3 +1,5 @@
+import './icons/github.svg'
+
 const footer = () => {
     // let githubIcon = "/src/icons/github.svg";
     const footerContainer = document.createElement("footer");
