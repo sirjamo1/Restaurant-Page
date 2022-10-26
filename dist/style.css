@@ -31,13 +31,13 @@
     margin-left: 10px;
 }
 .marble-text-div {
-    background-image: url("/src/images/marble-white.png");
+    background-image: url("/src/assets/images/marble-white.png");
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
 }
 .steak-house-text-div {
-    background-image: url("/src/images/marble-white.png");
+    background-image: url("/src/assets/images/marble-white.png");
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;

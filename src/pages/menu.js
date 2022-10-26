@@ -4,25 +4,25 @@ const menu = () => {
             name: "Chateaubriand",
             description:
                 "Traditionally consists of a large front cut fillet of tenderloin grilled between two lesser pieces of meat that are discarded after cooking.",
-            photoSrc: "/src/images/chateaubriand.png",
+            photoSrc: "/src/assets/images/chateaubriand.png",
         },
         {
             name: "Filet Mignon",
             description:
                 "Thick slices taken from the tenderloin or eye fillet.",
-            photoSrc: "/src/images/filet-mignon.png",
+            photoSrc: "/src/assets/images/filet-mignon.png",
         },
         {
             name: "Ribeye",
             description:
                 "The ribeye is carved from the primal section called the beef rib.",
-            photoSrc: "/src/images/ribeye.png",
+            photoSrc: "/src/assets/images/ribeye.png",
         },
         {
             name: "Striploin",
             description:
                 "Boneless cut from the short loin that's highly prized for its excellent balance of flavor & tenderness.",
-            photoSrc: "/src/images/striploin.png",
+            photoSrc: "/src/assets/images/striploin.png",
         },
     ];
     const sauces = [
@@ -30,19 +30,19 @@ const menu = () => {
             name: "Mushroom",
             description:
                 " Mushroom sauce is a rich sauce made from sautéed mushrooms and aromatics.",
-            photoSrc: "/src/images/mushroom-sauce.png",
+            photoSrc: "/src/assets/images/mushroom-sauce.png",
         },
         {
             name: "Pepper",
             description:
                 "A spicy hot sauce seasoned with cayenne peppers, chile peppers or peppercorns.",
-            photoSrc: "/src/images/pepper-sauce.png",
+            photoSrc: "/src/assets/images/pepper-sauce.png",
         },
         {
             name: "Blue Cheese",
             description:
                 "Blue cheese sauce is assertive and salty, with a tangy garlic kick.",
-            photoSrc: "/src/images/blue-cheese-sauce.png",
+            photoSrc: "/src/assets/images/blue-cheese-sauce.png",
         },
     ];
     const menuContainer = document.createElement("div");
@@ -79,7 +79,7 @@ const menu = () => {
     menuContainer.appendChild(likeItCookedText);
     const rareWellDoneImg = document.createElement("img");
     rareWellDoneImg.classList.add("rare-well-done-img");
-    rareWellDoneImg.setAttribute("src", "/src/images/rare-welldon.png");
+    rareWellDoneImg.setAttribute("src", "/src/assets/images/rare-welldon.png");
     rareWellDoneImg.setAttribute("alt", "cooked steak");
     menuContainer.appendChild(rareWellDoneImg);
     const chooseSauceText = document.createElement("h1");

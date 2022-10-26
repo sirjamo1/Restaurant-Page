@@ -7,7 +7,7 @@ const header = () => {
     iconContainer.classList.add("icon-container");
     header.appendChild(iconContainer);
     const steakImage = document.createElement("img");
-    steakImage.setAttribute("src", "/src/images/steak-transparent.png");
+    steakImage.setAttribute("src", "/src/assets/images/steak-transparent.png");
     steakImage.setAttribute("alt", "steak");
     iconContainer.appendChild(steakImage);
     const marbleSteakhouse = document.createElement("div");

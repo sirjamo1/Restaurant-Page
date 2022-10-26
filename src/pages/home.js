@@ -3,7 +3,7 @@ const home = () => {
         title: "Marble Steakhouse",
         description:
             "Home to four of the best cuts of meat you'll ever eat. </br> </br> Have it your way! We take pride in cooking your steak the way you like it, if you're not 100% satisfied with how it's cooked, we'll cook another. No questions asked.",
-            image: "/src/images/steak-on-grill.png"
+            image: "/src/assets/images/steak-on-grill.png"
     };
     const homeContainer = document.createElement("div");
     const steakOnGrillImg = document.createElement("img");

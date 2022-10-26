@@ -5,7 +5,7 @@ import menu from "./pages/menu";
 import contact from "./pages/contact";
 
 document.body.style.background =
-    "url('/src/images/marble-background.png') center center/cover fixed no-repeat";
+    "url('/src/assets/images/marble-background.png') center center/cover fixed no-repeat";
 const mainContainer = document.getElementById("content");
 const linkClasses = ["home-link", "menu-link", "contact-link"];
 const changePage = (page) => {
