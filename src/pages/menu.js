@@ -1,6 +1,5 @@
 const menu = () => {
-
-    //Note: menuItem.photoSrc path was /src/assets.... removed to allow gh-pages to get 
+    //Note: menuItem.photoSrc path was /src/assets.... removed to allow gh-pages to get
     const menuItem = [
         {
             name: "Chateaubriand",
@@ -81,17 +80,17 @@ const menu = () => {
     menuContainer.appendChild(likeItCookedText);
     const rareWellDoneImg = document.createElement("img");
     rareWellDoneImg.classList.add("rare-well-done-img");
-    rareWellDoneImg.setAttribute("src", "assets/images/rare-welldon.png");
+    rareWellDoneImg.setAttribute("src", "assets/images/rare-welldone.png");
     rareWellDoneImg.setAttribute("alt", "cooked steak");
     menuContainer.appendChild(rareWellDoneImg);
     const chooseSauceText = document.createElement("h1");
     chooseSauceText.innerHTML = "Choose a sauce.";
     menuContainer.appendChild(chooseSauceText);
-    let sauceContainer = document.createElement("div")
-    sauceContainer.classList.add("sauce-container")
-    menuContainer.appendChild(sauceContainer)
+    let sauceContainer = document.createElement("div");
+    sauceContainer.classList.add("sauce-container");
+    menuContainer.appendChild(sauceContainer);
     sauces.forEach((item) => {
-        let sauceCard = document.createElement("div")
+        let sauceCard = document.createElement("div");
         sauceCard.classList.add("sauce-cards");
         let sauceName = document.createElement("h3");
         sauceName.innerHTML = item.name;
@@ -99,12 +98,12 @@ const menu = () => {
         let sauceDescription = document.createElement("h4");
         sauceDescription.innerHTML = item.description;
         sauceCard.appendChild(sauceDescription);
-        let sauceImage = document.createElement("img")
-        sauceImage.setAttribute("src", item.photoSrc)
-        sauceImage.setAttribute("alt", `${item.name} sauce image`)
+        let sauceImage = document.createElement("img");
+        sauceImage.setAttribute("src", item.photoSrc);
+        sauceImage.setAttribute("alt", `${item.name} sauce image`);
         sauceImage.classList.add("sauce-image");
         sauceCard.appendChild(sauceImage);
-        sauceContainer.appendChild(sauceCard)
+        sauceContainer.appendChild(sauceCard);
     });
     const orderAtCounterText = document.createElement("h1");
     orderAtCounterText.classList.add("order-at-counter");
