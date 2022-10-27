@@ -81,7 +81,7 @@ const menu = () => {
     menuContainer.appendChild(likeItCookedText);
     const rareWellDoneImg = document.createElement("img");
     rareWellDoneImg.classList.add("rare-well-done-img");
-    rareWellDoneImg.setAttribute("src", "/src/assets/images/rare-welldon.png");
+    rareWellDoneImg.setAttribute("src", "assets/images/rare-welldon.png");
     rareWellDoneImg.setAttribute("alt", "cooked steak");
     menuContainer.appendChild(rareWellDoneImg);
     const chooseSauceText = document.createElement("h1");
