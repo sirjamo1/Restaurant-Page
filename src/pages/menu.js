@@ -55,33 +55,47 @@ const menu = () => {
     menuItemContainer.classList.add("menu-item-container");
     menuContainer.appendChild(menuItemContainer);
 
-
-class MenuCreator {
-    constructor() {
-
+    class MenuCreator {
+        constructor(item) {
+            let itemCard = document.createElement("div");
+            itemCard.classList.add("menu-cards");
+            let itemName = document.createElement("h3");
+            itemName.innerHTML = item.name;
+            itemCard.appendChild(itemName);
+            let itemDescription = document.createElement("h4");
+            itemDescription.innerHTML = item.description;
+            itemCard.appendChild(itemDescription);
+            let itemImage = document.createElement("img");
+            itemImage.setAttribute("src", item.photoSrc);
+            itemImage.setAttribute("alt", item.name);
+            itemCard.appendChild(itemImage);
+            let comesWith = document.createElement("p");
+            comesWith.innerHTML =
+                "* All steaks are served with baked potatoes and steamed veggies";
+            itemCard.appendChild(comesWith);
+            menuItemContainer.appendChild(itemCard);
+        }
     }
-}
-const menuItemP = new MenuCreator(sauces[0].name)
-console.log("hello")
-    // add menu cards
+    class SauceCreator {
+        constructor(item) {
+            let sauceCard = document.createElement("div");
+            sauceCard.classList.add("sauce-cards");
+            let sauceName = document.createElement("h3");
+            sauceName.innerHTML = item.name;
+            sauceCard.appendChild(sauceName);
+            let sauceDescription = document.createElement("h4");
+            sauceDescription.innerHTML = item.description;
+            sauceCard.appendChild(sauceDescription);
+            let sauceImage = document.createElement("img");
+            sauceImage.setAttribute("src", item.photoSrc);
+            sauceImage.setAttribute("alt", `${item.name} sauce image`);
+            sauceImage.classList.add("sauce-image");
+            sauceCard.appendChild(sauceImage);
+            sauceContainer.appendChild(sauceCard);
+        }
+    }
     menuItem.forEach((item) => {
-        let itemCard = document.createElement("div");
-        itemCard.classList.add("menu-cards");
-        let itemName = document.createElement("h3");
-        itemName.innerHTML = item.name;
-        itemCard.appendChild(itemName);
-        let itemDescription = document.createElement("h4");
-        itemDescription.innerHTML = item.description;
-        itemCard.appendChild(itemDescription);
-        let itemImage = document.createElement("img");
-        itemImage.setAttribute("src", item.photoSrc);
-        itemImage.setAttribute("alt", item.name);
-        itemCard.appendChild(itemImage);
-        let comesWith = document.createElement("p");
-        comesWith.innerHTML =
-            "* All steaks are served with baked potatoes and steamed veggies";
-        itemCard.appendChild(comesWith);
-        menuItemContainer.appendChild(itemCard);
+        let newMenuCard = new MenuCreator(item);
     });
     const likeItCookedText = document.createElement("h1");
     likeItCookedText.innerHTML = "How you would like it cooked?";
@@ -98,21 +112,8 @@ console.log("hello")
     sauceContainer.classList.add("sauce-container");
     menuContainer.appendChild(sauceContainer);
     sauces.forEach((item) => {
-        let sauceCard = document.createElement("div");
-        sauceCard.classList.add("sauce-cards");
-        let sauceName = document.createElement("h3");
-        sauceName.innerHTML = item.name;
-        sauceCard.appendChild(sauceName);
-        let sauceDescription = document.createElement("h4");
-        sauceDescription.innerHTML = item.description;
-        sauceCard.appendChild(sauceDescription);
-        let sauceImage = document.createElement("img");
-        sauceImage.setAttribute("src", item.photoSrc);
-        sauceImage.setAttribute("alt", `${item.name} sauce image`);
-        sauceImage.classList.add("sauce-image");
-        sauceCard.appendChild(sauceImage);
-        sauceContainer.appendChild(sauceCard);
-    });
+        let newSauceCard = new SauceCreator(item);
+    })
     const orderAtCounterText = document.createElement("h1");
     orderAtCounterText.classList.add("order-at-counter");
     orderAtCounterText.innerHTML = "Order at the counter.";
