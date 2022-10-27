@@ -46,15 +46,6 @@ const menu = () => {
             photoSrc: "./assets/images/blue-cheese-sauce.png",
         },
     ];
-    const menuContainer = document.createElement("div");
-    menuContainer.classList.add("menu-container");
-    const chooseSteakText = document.createElement("h1");
-    menuContainer.appendChild(chooseSteakText);
-    chooseSteakText.innerHTML = "Choose a steak.";
-    const menuItemContainer = document.createElement("div");
-    menuItemContainer.classList.add("menu-item-container");
-    menuContainer.appendChild(menuItemContainer);
-
     class MenuCreator {
         constructor(item) {
             let itemCard = document.createElement("div");
@@ -94,6 +85,15 @@ const menu = () => {
             sauceContainer.appendChild(sauceCard);
         }
     }
+
+    const menuContainer = document.createElement("div");
+    menuContainer.classList.add("menu-container");
+    const chooseSteakText = document.createElement("h1");
+    menuContainer.appendChild(chooseSteakText);
+    chooseSteakText.innerHTML = "Choose a steak.";
+    const menuItemContainer = document.createElement("div");
+    menuItemContainer.classList.add("menu-item-container");
+    menuContainer.appendChild(menuItemContainer);
     menuItem.forEach((item) => {
         let newMenuCard = new MenuCreator(item);
     });
@@ -113,7 +113,7 @@ const menu = () => {
     menuContainer.appendChild(sauceContainer);
     sauces.forEach((item) => {
         let newSauceCard = new SauceCreator(item);
-    })
+    });
     const orderAtCounterText = document.createElement("h1");
     orderAtCounterText.classList.add("order-at-counter");
     orderAtCounterText.innerHTML = "Order at the counter.";
