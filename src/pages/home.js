@@ -1,5 +1,4 @@
-import steakOnGrill from "src/assets/images/steak-on-grill.png";
-
+import steakOnGrill from "./assets/images/steak-on-grill.png";
 
 const home = () => {
     const homeContent = {

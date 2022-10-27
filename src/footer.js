@@ -1,5 +1,4 @@
 import github from './assets/icons/github.svg'
-
 const footer = () => {
     const footerContainer = document.createElement("footer");
     const footerText = document.createElement("h4");

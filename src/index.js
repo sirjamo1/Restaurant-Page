@@ -3,7 +3,7 @@ import footer from "./footer";
 import home from "./pages/home";
 import menu from "./pages/menu";
 import contact from "./pages/contact";
-import marbleBackground from "./assets/images/marble-background.png"
+import marbleBackground from "./assets/images/marble-background.png";
 
 document.body.style.background =
     `url(${marbleBackground}) center center/cover fixed no-repeat`;
