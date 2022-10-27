@@ -3,10 +3,10 @@ import footer from "./footer";
 import home from "./pages/home";
 import menu from "./pages/menu";
 import contact from "./pages/contact";
-
+import marbleBackground from "./assets/images/marble-background.png"
 
 document.body.style.background =
-    "url('/src/assets/images/marble-background.png') center center/cover fixed no-repeat";
+    `url(${marbleBackground}) center center/cover fixed no-repeat`;
 const mainContainer = document.getElementById("content");
 const linkClasses = ["home-link", "menu-link", "contact-link"];
 const changePage = (page) => {
