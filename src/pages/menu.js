@@ -5,25 +5,25 @@ const menu = () => {
             name: "Chateaubriand",
             description:
                 "Traditionally consists of a large front cut fillet of tenderloin grilled between two lesser pieces of meat that are discarded after cooking.",
-            photoSrc: "assets/images/chateaubriand.png",
+            photoSrc: "./assets/images/chateaubriand.png",
         },
         {
             name: "Filet Mignon",
             description:
                 "Thick slices taken from the tenderloin or eye fillet.",
-            photoSrc: "assets/images/filet-mignon.png",
+            photoSrc: "./assets/images/filet-mignon.png",
         },
         {
             name: "Ribeye",
             description:
                 "The ribeye is carved from the primal section called the beef rib.",
-            photoSrc: "assets/images/ribeye.png",
+            photoSrc: "./assets/images/ribeye.png",
         },
         {
             name: "Striploin",
             description:
                 "Boneless cut from the short loin that's highly prized for its excellent balance of flavor & tenderness.",
-            photoSrc: "assets/images/striploin.png",
+            photoSrc: "./assets/images/striploin.png",
         },
     ];
     const sauces = [
@@ -31,19 +31,19 @@ const menu = () => {
             name: "Mushroom",
             description:
                 " Mushroom sauce is a rich sauce made from sautéed mushrooms and aromatics.",
-            photoSrc: "assets/images/mushroom-sauce.png",
+            photoSrc: "./assets/images/mushroom-sauce.png",
         },
         {
             name: "Pepper",
             description:
                 "A spicy hot sauce seasoned with cayenne peppers, chile peppers or peppercorns.",
-            photoSrc: "assets/images/pepper-sauce.png",
+            photoSrc: "./assets/images/pepper-sauce.png",
         },
         {
             name: "Blue Cheese",
             description:
                 "Blue cheese sauce is assertive and salty, with a tangy garlic kick.",
-            photoSrc: "assets/images/blue-cheese-sauce.png",
+            photoSrc: "./assets/images/blue-cheese-sauce.png",
         },
     ];
     const menuContainer = document.createElement("div");
@@ -55,6 +55,14 @@ const menu = () => {
     menuItemContainer.classList.add("menu-item-container");
     menuContainer.appendChild(menuItemContainer);
 
+
+class MenuCreator {
+    constructor() {
+
+    }
+}
+const menuItemP = new MenuCreator(sauces[0].name)
+console.log("hello")
     // add menu cards
     menuItem.forEach((item) => {
         let itemCard = document.createElement("div");
@@ -79,7 +87,7 @@ const menu = () => {
     likeItCookedText.innerHTML = "How you would like it cooked?";
     menuContainer.appendChild(likeItCookedText);
     const rareWellDoneImg = document.createElement("img");
-    rareWellDoneImg.setAttribute("src", "assets/images/rare-welldone.png");
+    rareWellDoneImg.setAttribute("src", "./assets/images/rare-welldone.png");
     rareWellDoneImg.setAttribute("alt", "cooked steak");
     rareWellDoneImg.classList.add("rare-well-done-img");
     menuContainer.appendChild(rareWellDoneImg);
