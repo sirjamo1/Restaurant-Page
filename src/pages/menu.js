@@ -79,9 +79,9 @@ const menu = () => {
     likeItCookedText.innerHTML = "How you would like it cooked?";
     menuContainer.appendChild(likeItCookedText);
     const rareWellDoneImg = document.createElement("img");
-    rareWellDoneImg.classList.add("rare-well-done-img");
     rareWellDoneImg.setAttribute("src", "assets/images/rare-welldone.png");
     rareWellDoneImg.setAttribute("alt", "cooked steak");
+    rareWellDoneImg.classList.add("rare-well-done-img");
     menuContainer.appendChild(rareWellDoneImg);
     const chooseSauceText = document.createElement("h1");
     chooseSauceText.innerHTML = "Choose a sauce.";
